@@ -1,0 +1,241 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --content-tab-background: #F6D050;
+    --content-tab-color: #000000;
+    --button-roundness: 0.5rem;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: "Popins", sans-serif;
+}
+
+.popup-trigger__container {
+    margin: 2rem 2rem;
+}
+
+/* ------------------ Modal ------------------  */
+.popup-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.15s linear;
+}
+
+.popup-modal.show {
+    opacity: 1;
+    visibility: visible;
+
+}
+
+.popup-modal__wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-modal__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    background-color: hsl(216, 50%, 16%);
+    opacity: 0.5;
+}
+
+.popup-modal__content {
+    position: relative;
+    max-width: 420px;
+    margin: auto auto;
+    z-index: 1;
+    background-color: hsl(216, 50%, 16%);
+    border-radius: 0.5rem;
+    overflow: hidden;
+    max-height: 80%;
+    overflow-y: auto;
+}
+
+.perfume  h2{
+  color: white;
+    font-weight: 700;
+    cursor: pointer;
+}
+.item-description p {
+    color: hsl(214, 16%, 46%);
+    text-align: left;
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+.flex {
+    width: 100%;
+    height: 25px;
+    margin-top: 12px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 2px solid hsl(214, 16%, 46%);
+  
+
+}
+  .flex-left,
+  .flex-right {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 0.34rem;
+    margin-top:-13px;    
+  }
+  .flex-left p{
+    color: aqua;
+    font-weight:bold;
+  }
+  .flex-right p{
+    color: hsl(214, 16%, 46%);
+  }
+  .flex-left img,
+  .flex-right img {
+    width: 17px;
+    height: 17px;
+    object-fit: contain;
+  }
+.profile-image{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    gap: 0.7rem;
+    color: white;
+}
+.profile-image img{
+    width: 42px;
+    height: 42px;
+    object-fit: cover;
+    display: block;
+    border-radius: 50%;
+}
+.creater{
+    display: flex;
+    gap: 0.2rem;
+}
+.creation{
+    color: hsl(214, 16%, 46%);
+}
+
+@media screen and (max-width: 600px) {
+    .popup-modal__content {
+        margin: 4rem 2rem;
+        max-height: 90%;
+        max-width: 100%;
+    }
+
+    .popup-modal-content__img-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 0.5rem;
+        overflow: hidden;
+        height:auto;
+    }
+
+}
+
+.popup-modal__content-wrapper {
+    display: grid;
+    gap: 1.5rem;
+    padding-inline: 1.6rem;
+    padding-block: 1.6rem;
+}
+
+.popup-modal-content__img-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    position: relative;
+    height: 300px;
+}
+.perfume:hover h2{
+    color: hsla(178, 100%, 50%, 0.4);
+}
+.equilibrium {
+    width: 100%;
+    height: 100%;
+  }
+
+.equilibirum img {
+    display: block;
+    width: 100%;
+    height: 330px;
+    object-fit: cover;
+
+}
+.view-icon {
+    width: 100%;
+    height: 100%;
+    transform: translate(-50%, -50%);
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+  }
+.view-icon img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  
+}
+.popup-modal-content__img-wrapper:hover .view-icon {
+    display: block;
+    background-color: hsla(178, 100%, 50%, 0.4);
+    border-radius: 10px;
+  }
+
+.popup-modal-content__details {
+    display: grid;
+    gap: 1.4rem;
+}
+
+.button.popup-modal-content__tab-single {
+    cursor: auto;
+}
+
+.button {
+    display: inline-block;
+    background-color: hsl(216, 50%, 16%);
+    color: white;
+    border-radius: var(--button-roundness, 0.5rem);
+    padding-inline: 2rem;
+    padding-block: 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+
+}
+
+.cart-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.7rem;
+}
